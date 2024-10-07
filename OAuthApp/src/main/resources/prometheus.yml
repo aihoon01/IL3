@@ -1,0 +1,6 @@
+scrape_configs:
+  - job_name: 'springboot-app'
+    metrics_path: '/management/actuator/prometheus'  # This is where your metrics are exposed
+    scrape_interval: 5s                   # How often Prometheus will scrape the metrics
+    static_configs:
+      - targets: ['localhost:8282']

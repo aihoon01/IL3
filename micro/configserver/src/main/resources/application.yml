@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///c:/Users/StephenAihoon/Desktop/IntLabs/Lab3/micro/git-localconfig-repo
+
+
+server:
+  port: 8888
+
+
+---
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///config-repo
+  config:
+    activate:
+      on-profile: dev
